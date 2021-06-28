@@ -1,0 +1,360 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  height: 54px;
+  background: #fff;
+}
+
+.header__desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-microsoft {
+  display: inline-block;
+  padding: 16px 6px 16px 10px;
+  width: 122px;
+  margin-right: 13px;
+}
+
+.header__logo-surface {
+  position: relative;
+  padding: 16px 6px 16px 10px;
+  margin-left: 18px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.header__logo-surface::before {
+  border-left: 2px solid #000;
+  height: 24px;
+  content: "";
+  margin-left: -11px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hover-action {
+  position: relative;
+}
+
+.hover-action::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #000;
+  left: 50%;
+  bottom: -5px;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateX(-50%);
+} 
+
+.hover-action:hover::after {
+  opacity: 1;
+}
+
+.header__navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.header__navigation-item {
+  position: relative;
+  font-size: 13px;
+  padding: 16px 30px 16px 12px;
+  font-weight: 300;
+}
+
+.header__navigation-item--more {
+  display: none;
+}
+
+.header__navigation-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: url('../img/down-arrow.svg') no-repeat;
+  right: 15px;
+  top: 20px;
+}
+
+.header__actions-all {
+  position: relative;
+  padding: 16px 20px 16px 15px;
+  margin-right: 15px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.header__actions-all::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: url('../img/down-arrow.svg') no-repeat;
+  right: 5px;
+  top: 20px;
+}
+
+.header__actions-search {
+  position: relative;
+  padding: 13px 25px 13px 9px;
+  margin-right: 6px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.header__actions-search::before {
+  content: "";
+  position: absolute;
+  background: url('../img/search.svg') no-repeat;
+  background-size: contain;
+  height: 16px;
+  width: 16px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__actions-cart {
+  position: relative;
+  padding: 13px 25px 13px 9px;
+  margin-right: 6px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.header__actions-cart::before {
+  content: "";
+  position: absolute;
+  background: url('../img/shopping-cart.svg') no-repeat;
+  background-size: contain;
+  height: 16px;
+  width: 16px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__actions-login {
+  position: relative;
+  padding: 13px 44px 13px 9px;
+  margin-right: 6px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.header__actions-login::before {
+  content: "";
+  position: absolute;
+  background: url('../img/user.svg') no-repeat;
+  background-size: contain;
+  height: 32px;
+  width: 32px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* styles for mobile */
+
+.header__mobile {
+  display: none;
+  margin-top: 1px;
+}
+
+.header-mobile__top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 54px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.header-mobile__left {
+  display: flex;
+  align-items: center;
+}
+
+.header-mobile__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  padding: 18.5px 14px;
+}
+
+.header-mobile__menu span {
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
+.header-mobile__search {
+  width: 48px;
+  height: 48px;
+  background: url('../img/search.svg') no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
+}
+
+.header-mobile__microsoft {
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-mobile__microsoft img {
+  width: 108px;
+  height: 23px;
+}
+
+.header-mobile__right {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.header-mobile__cart {
+  width: 48px;
+  height: 48px;
+  background: url('../img/shopping-cart.svg') no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
+  margin-right: 5px;
+}
+
+.header-mobile__login {
+  width: 48px;
+  height: 48px;
+  background: url('../img/user.svg') no-repeat;
+  background-size: 32px 32px;
+  background-position: center;
+}
+
+.header-mobile__bottom {
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0 15px;
+  height: 33px;
+  text-align: left;
+}
+
+.header-mobile__bottom span {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 33px;
+  padding-right: 25px;
+}
+
+.header-mobile__bottom span::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: url('../img/down-arrow.svg') no-repeat;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1399px) {
+  .header__actions-search span, .header__actions-cart span, .header__actions-login span {
+    display: none;
+  }
+}
+
+@media (max-width: 1210px) {
+  .header__navigation-item--shop, .header__navigation-item--supp {
+    display: none;
+  }
+  .header__navigation-item--more {
+    display: block;
+  }
+}
+
+@media (max-width: 1090px) {
+  .header__navigation-item--access {
+    display: none;
+  }
+}
+
+@media (max-width: 1070px) {
+  .header__desktop {
+    padding: 0 24px;
+  }
+  .header__navigation-item--access {
+    display: block;
+  }
+}
+
+@media (max-width: 1028px) {
+  .header__navigation-item--access {
+    display: none;
+  }
+}
+
+@media (max-width: 930px) {
+  .header__navigation-item--compforbus {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .header__desktop {
+    display: none;
+  }
+  .header__mobile {
+    display: block;
+  }
+}
